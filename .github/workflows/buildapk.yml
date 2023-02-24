@@ -2,20 +2,14 @@ name: build android apk
 run-name: learn to build android apk
 on: [push]
 jobs:
-	build:
-		runs-on: ubuntu-latest
-		steps:
-			- name: check out
-			  uses: actions/check-out@v3
-			- name: add nodejs
-			  uses: actions/setup-node@v3
-			  with: 
-			  	node-version: '18'
-     
-			- name: script
-			  run: ./buildapk.sh
-		
-			  	
-		
-			 
-		    
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out
+        uses: actions/check-out@v3
+      - name: add nodejs
+        uses: actions/setup-node@v3
+          with: 
+            node-version: '18'
+      - name: script
+        run: ./buildapk.sh
