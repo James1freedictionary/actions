@@ -5,7 +5,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "${{ toJSON(github) }}"
+      - run: echo "${{ github }}" 
       - name: check out repo
+        
         uses: actions/check-out@v3
       - name: add nodejs
         uses: actions/setup-node@v3
