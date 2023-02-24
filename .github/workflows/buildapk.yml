@@ -9,7 +9,7 @@ jobs:
       - run: echo "${{ github }}" 
       - name: check out repo
         
-        uses: actions/check-out@v3
+        uses: actions/checkout@v3
       - name: add nodejs
         uses: actions/setup-node@v3
         with: 
