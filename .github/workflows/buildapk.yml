@@ -9,7 +9,7 @@ jobs:
         uses: actions/check-out@v3
       - name: add nodejs
         uses: actions/setup-node@v3
-          with: 
-            node-version: '18'
+        with: 
+          node-version: '18'
       - name: script
-        run: ./buildapk.sh
+        run: chmod +x buildapk.sh && ./buildapk.sh
